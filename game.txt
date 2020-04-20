@@ -1,0 +1,15 @@
+
+def airplane(y):
+    pen = turtle.Turtle()
+    if y < 0:
+        pen.color("red")
+    else:
+        pen.color("yellow")
+    for current_x in [-200, 0, 200]:
+        pen.penup()
+        pen.setpos(x=current_x, y=y)
+        pen.pendown()
+        pen.circle(radius=random.randint(50, 70))
+
+airplane(y=100)
+airplane(y=-100)
