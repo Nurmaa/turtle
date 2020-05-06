@@ -121,12 +121,12 @@ def check_impact():
         enemy_missile = enemy_info['missile']
         if enemy_missile.distance(BASE_X, BASE_Y) < enemy_info['radius'] * 10:
             base_health -= 100
-
+            print('base_health', base_health)
 while True:
     window.update()  #обновляем окно
-    check_impact()
     if game_over():
         continue
+    check_impact() 
     check_enemy_count()  #проверяем количество врагов
     check_interceptions()  #проверяем перехваты
     move_missiles(missiles=our_missiles)  #двигаем свои ракеты
